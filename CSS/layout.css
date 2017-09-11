@@ -1,0 +1,36 @@
+body{
+    padding: 1vw;
+}
+
+header{
+  height: 20vw;
+  font-size: 8vw;
+}
+
+h1{
+  float:left;
+}
+
+header i{
+  float: right;
+}
+
+.clearfix{
+  clear:both;
+}
+
+nav{
+  display:none;
+}
+
+section img{
+  float:left;
+}
+section p{
+  font-size: 2vw;
+}
+
+#skills{
+  margin-top: 6vw;
+  text-align: center;
+}
