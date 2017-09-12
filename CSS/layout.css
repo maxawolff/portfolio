@@ -3,12 +3,16 @@ body{
 }
 
 header{
-  height: 20vw;
+  height: 10vw;
   font-size: 8vw;
 }
 
 h1{
   float:left;
+}
+
+h2{
+  font-size: 8vw;
 }
 
 header i{
@@ -23,11 +27,30 @@ nav{
   display:none;
 }
 
+nav div{
+    border: thin solid black;
+    display: inline-block;
+    width: 99%;
+    height: 4vh;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+nav div a{
+  font-size: 5vw;
+  text-decoration: none;
+}
+
+#about{
+  margin-top: 3vh;
+}
+
 #about img{
   float:left;
+  width: 35%;
 }
 section p{
-  font-size: 2vw;
+  font-size: 4vw;
 }
 
 #skills{
