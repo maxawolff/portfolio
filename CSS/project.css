@@ -4,5 +4,20 @@
 
 #projects{
   text-align: center;
+}
+
+#projects h2{
   margin-top: 5vw;
+}
+
+#projects h3{
+    margin-top: 5vw;
+}
+
+#projects a{
+  display:inherit;
+}
+
+#projects a:link{
+  text-decoration: none;
 }
