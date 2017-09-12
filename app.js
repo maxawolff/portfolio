@@ -35,3 +35,19 @@ var barksNRec = new Project('Barks N Rec', 'https://chelseadole.github.io/barks-
 barksNRec.addToDoc();
 busMall.addToDoc();
 salmonCookies.addToDoc();
+
+document.getElementsByTagName('i')[0].addEventListener('click', showMenu);
+var isDisplayed = true;
+
+function showMenu(){
+  var nav = document.getElementsByTagName('nav')[0];
+
+  if(isDisplayed){
+    nav.style.display = 'block';
+    isDisplayed = false;
+  }
+  else if(!isDisplayed){
+    nav.style.display = 'none';
+    isDisplayed = true;
+  }
+}
