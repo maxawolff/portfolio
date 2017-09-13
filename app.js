@@ -1,40 +1,36 @@
 'use strict'
 
-function Project(name, url, imageLink, date){
-  this.name = name;
-  this.url = url;
-  this.imageLink = imageLink;
-  this.date = date;
+var projects = [];
 
-  var appendSpot = document.getElementById('projects');
+function Project(rawDataObj){
+  this.title = rawDataObj.title;
+  this.url = rawDataObj.url;
+  this.image = rawDataObj.image;
+  this.date = rawDataObj.date;
 
-  this.addToDoc = function(){
-    var projectTitle = document.createElement('h3');
-    projectTitle.innerHTML = this.name;
-    appendSpot.appendChild(projectTitle);
+  this.toHtml = function(){
+    var $newProject = $('div.template').clone();
+    $newProject.removeClass('template');
 
-    var projectImage = document.createElement('img');
-    projectImage.setAttribute('src', this.imageLink);
-    appendSpot.appendChild(projectImage);
+    $newProject.find('h3').text(this.title);
+    console.log(this.title);
+    $newProject.find('img').attr('src', this.image);
+    $newProject.find('a').attr('href', this.url);
+    $newProject.find('a').html('This is a link to the ' + this.title + ' website');
+    $newProject.find('p').text(this.date);
 
-    var projectURL = document.createElement('a');
-    projectURL.innerText = 'link to the ' + this.name + ' project';
-    projectURL.href = this.url;
-    appendSpot.appendChild(projectURL);
 
-    var endDate = document.createElement('p');
-    endDate.innerHTML = 'Completed on ' + this.date;
-    appendSpot.appendChild(endDate);
+    return $newProject;
   }
 }
 
-var salmonCookies = new Project('Salmon Cookies', 'https://maxawolff.github.io/cookie-stand/', 'images/salmonCookies.png', '8/18/17');
-var busMall = new Project('Bus Mall', 'https://maxawolff.github.io/bus-mall/', 'images/busMall.png', '8/25/2017');
-var barksNRec = new Project('Barks N Rec', 'https://chelseadole.github.io/barks-and-rec/index.html', 'images/barksNRec.png', '8/31/2017');
+rawData.forEach(function(projectObj){
+  projects.push(new Project(projectObj));
+});
 
-barksNRec.addToDoc();
-busMall.addToDoc();
-salmonCookies.addToDoc();
+projects.forEach(function(project){
+  $('#projects').append(project.toHtml());
+});
 
 document.getElementsByTagName('i')[0].addEventListener('click', showMenu);
 var isDisplayed = true;

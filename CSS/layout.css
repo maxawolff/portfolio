@@ -62,3 +62,7 @@ section p{
   margin-top: 6vw;
   text-align: center;
 }
+
+.template{
+  display: none;
+}
