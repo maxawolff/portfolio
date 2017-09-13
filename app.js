@@ -7,21 +7,21 @@ function Project(rawDataObj){
   this.url = rawDataObj.url;
   this.image = rawDataObj.image;
   this.date = rawDataObj.date;
+}
 
-  this.toHtml = function(){
-    var $newProject = $('div.template').clone();
-    $newProject.removeClass('template');
+Project.prototype.toHtml = function(){
+  var $newProject = $('div.template').clone();
+  $newProject.removeClass('template');
 
-    $newProject.find('h3').text(this.title);
-    console.log(this.title);
-    $newProject.find('img').attr('src', this.image);
-    $newProject.find('a').attr('href', this.url);
-    $newProject.find('a').html('This is a link to the ' + this.title + ' website');
-    $newProject.find('p').text(this.date);
+  $newProject.find('h3').text(this.title);
+  console.log(this.title);
+  $newProject.find('img').attr('src', this.image);
+  $newProject.find('a').attr('href', this.url);
+  $newProject.find('a').html('This is a link to the ' + this.title + ' website');
+  $newProject.find('p').text(this.date);
 
 
-    return $newProject;
-  }
+  return $newProject;
 }
 
 rawData.forEach(function(projectObj){
