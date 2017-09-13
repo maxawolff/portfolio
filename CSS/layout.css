@@ -66,3 +66,24 @@ section p{
 .template{
   display: none;
 }
+
+@media only screen and (min-width: 640px){
+  .menu{
+    display: none;
+  }
+
+  nav{
+    display:block;
+  }
+
+  nav div{
+    height: 7vw;
+    width: 24%;
+  }
+
+  h1{
+    float: none;
+    width:37%;
+    margin: 0 auto;
+  }
+}
