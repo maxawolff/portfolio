@@ -1,3 +1,8 @@
+*{
+  background-color: #0da4e0;
+  color: white;
+}
+
 body{
     padding: 1vw;
 }
@@ -9,10 +14,22 @@ header{
 
 h1{
   float:left;
+  background-color: white;
+  color: #e00d0d;
+  padding: 10px;
+  border-radius: 45%;
 }
 
 h2{
   font-size: 8vw;
+  background-color: white;
+  color: #e00d0d;
+  padding: 10px;
+  border-radius: 45%;
+  width: 50%;
+  display: inline-block;
+  border: 1px solid;
+  margin-bottom: 1vw;
 }
 
 header i{
@@ -25,6 +42,7 @@ header i{
 
 nav{
   display:none;
+  margin-top: 6vw;
 }
 
 nav div{
@@ -39,6 +57,7 @@ nav div{
 nav div a{
   font-size: 5vw;
   text-decoration: none;
+  color: black;
 }
 
 /*first section*/
@@ -67,6 +86,10 @@ section p{
 #findMe{
   margin-top: 6vw;
   text-align: center;
+}
+
+#findMe h2{
+  width: 49%;
 }
 
 .template{
