@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var projects = [];
 
@@ -14,7 +14,6 @@ Project.prototype.toHtml = function(){
   $newProject.removeClass('template');
 
   $newProject.find('h3').text(this.title);
-  console.log(this.title);
   $newProject.find('img').attr('src', this.image);
   $newProject.find('a').attr('href', this.url);
   $newProject.find('a').html('This is a link to the ' + this.title + ' website');
@@ -22,7 +21,7 @@ Project.prototype.toHtml = function(){
 
 
   return $newProject;
-}
+};
 
 rawData.forEach(function(projectObj){
   projects.push(new Project(projectObj));
@@ -30,6 +29,43 @@ rawData.forEach(function(projectObj){
 
 projects.forEach(function(project){
   $('#projects').append(project.toHtml());
+});
+
+var $aboutSec = $('section:eq(0)');
+var $projectSec = $('section:eq(1)');
+var $skillsSec = $('section:eq(2)');
+var $findSec = $('section:eq(3)');
+
+var $aboutBtn = $('nav div:eq(0)');
+$aboutBtn.on('click', function(){
+  $aboutSec.show();
+  $projectSec.hide();
+  $skillsSec.hide();
+  $findSec.hide();
+});
+
+var $projectBtn = $('nav div:eq(1)');
+$projectBtn.on('click', function(){
+  $aboutSec.hide();
+  $projectSec.show();
+  $skillsSec.hide();
+  $findSec.hide();
+});
+
+var $skillsBtn = $('nav div:eq(2)');
+$skillsBtn.on('click', function(){
+  $aboutSec.hide();
+  $projectSec.hide();
+  $skillsSec.show();
+  $findSec.hide();
+});
+
+var $findBtn = $('nav div:eq(3)');
+$findBtn.on('click', function(){
+  $aboutSec.hide();
+  $projectSec.hide();
+  $skillsSec.hide();
+  $findSec.show();
 });
 
 document.getElementsByTagName('i')[0].addEventListener('click', showMenu);

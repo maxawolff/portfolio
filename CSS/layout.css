@@ -41,6 +41,12 @@ nav div a{
   text-decoration: none;
 }
 
+/*first section*/
+
+section:first-child{
+  background-color: green;
+}
+
 #about{
   margin-top: 3vh;
 }
