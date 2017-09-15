@@ -30,7 +30,7 @@ var $projectSec = $('section:eq(1)');
 var $skillsSec = $('section:eq(2)');
 var $findSec = $('section:eq(3)');
 
-var $aboutBtn = $('nav div:eq(0)');
+var $aboutBtn = $('nav p:eq(0)');
 $aboutBtn.on('click', function(){
   $aboutSec.show();
   $projectSec.hide();
@@ -38,7 +38,7 @@ $aboutBtn.on('click', function(){
   $findSec.hide();
 });
 
-var $projectBtn = $('nav div:eq(1)');
+var $projectBtn = $('nav p:eq(1)');
 $projectBtn.on('click', function(){
   $aboutSec.hide();
   $projectSec.show();
@@ -46,7 +46,7 @@ $projectBtn.on('click', function(){
   $findSec.hide();
 });
 
-var $skillsBtn = $('nav div:eq(2)');
+var $skillsBtn = $('nav p:eq(2)');
 $skillsBtn.on('click', function(){
   $aboutSec.hide();
   $projectSec.hide();
@@ -54,7 +54,7 @@ $skillsBtn.on('click', function(){
   $findSec.hide();
 });
 
-var $findBtn = $('nav div:eq(3)');
+var $findBtn = $('nav p:eq(3)');
 $findBtn.on('click', function(){
   $aboutSec.hide();
   $projectSec.hide();

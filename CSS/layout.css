@@ -18,6 +18,8 @@ h1{
   color: #e00d0d;
   padding: 10px;
   border-radius: 45%;
+  border: 1px solid;
+  font-family: 'Croissant One', cursive;
 }
 
 h2{
@@ -27,9 +29,10 @@ h2{
   padding: 10px;
   border-radius: 45%;
   width: 50%;
-  display: inline-block;
   border: 1px solid;
+  margin: 0 auto;
   margin-bottom: 1vw;
+  font-family: 'Croissant One', cursive;
 }
 
 header i{
@@ -56,6 +59,7 @@ nav p{
   text-align: center;
   margin: 0 auto;
   margin-bottom: 2vw;
+  font-family: 'Croissant One', cursive;
 }
 
 nav div a{
