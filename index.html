@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="/CSS/layout.css">
     <link rel="stylesheet" href="/CSS/project.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script id = "template" type = "text/x-handlebars-template">
+      <div>
+        <h3>{{title}}</h3>
+        <img src='{{image}}'>
+        <a href='{{url}}'>This is a link to the {{title}} website</a>
+        <p>{{date}}</p>
+      </div>
+    </script>
+
   </head>
   <body>
     <header>
@@ -40,12 +50,12 @@
 
     <section id="projects">
       <h2>Completed Projects</h2>
-      <div class='template'>
+      <!-- <div class='template'>
         <h3>Title of Project</h3>
         <img src=''>
         <a href='linktowebsite.com'>This is a link to the website</a>
         <p>date completed</p>
-      </div>
+      </div> -->
     </section>
 
     <section id="skills" class="clearfix">
@@ -65,6 +75,7 @@
       </ul>
     </section>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="projects.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </html>
