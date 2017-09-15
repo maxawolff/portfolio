@@ -10,17 +10,6 @@ function Project(rawDataObj){
 }
 
 Project.prototype.toHtml = function(){
-  // var $newProject = $('div.template').clone();
-  // $newProject.removeClass('template');
-
-  // $newProject.find('h3').text(this.title);
-  // $newProject.find('img').attr('src', this.image);
-  // $newProject.find('a').attr('href', this.url);
-  // $newProject.find('a').html('This is a link to the ' + this.title + ' website');
-  // $newProject.find('p').text(this.date);
-
-
-  // return $newProject;
 
   var sourceHTML = $('#template').html();
   var actualTemplate = Handlebars.compile(sourceHTML);
