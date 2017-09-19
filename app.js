@@ -43,34 +43,6 @@ Project.fetchAll = function() {
   }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var $aboutSec = $('section:eq(0)');
 var $projectSec = $('section:eq(1)');
 var $skillsSec = $('section:eq(2)');
