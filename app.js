@@ -35,11 +35,12 @@ Project.fetchAll = function() {
     Project.addToPage();
   }
   else{
-    $.get('data.json', function(response){
-      localStorage.setItem('rawData', JSON.stringify(response));
-    });
-    Project.loadAll(JSON.parse(localStorage.rawData));
-    Project.addToPage();
+    $.get('data.json')
+      .then(function(response){
+        localStorage.setItem('rawData', JSON.stringify(response));
+        Project.loadAll(JSON.parse(localStorage.rawData));
+        Project.addToPage();
+      });
   }
 };
 
