@@ -17,13 +17,59 @@ Project.prototype.toHtml = function(){
   return newRawHTML;
 };
 
-rawData.forEach(function(projectObj){
-  projects.push(new Project(projectObj));
-});
+Project.loadAll = function(rawData){
+  rawData.forEach(function(projectObj){
+    projects.push(new Project(projectObj));
+  });
+};
 
-projects.forEach(function(project){
-  $('#projects').append(project.toHtml());
-});
+Project.addToPage = function(){
+  projects.forEach(function(project){
+    $('#projects').append(project.toHtml());
+  });
+};
+
+Project.fetchAll = function() {
+  if(localStorage.rawData){
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    Project.addToPage();
+  }
+  else{
+    $.get('data.json', function(response){
+      localStorage.setItem('rawData', JSON.stringify(response));
+    });
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    Project.addToPage();
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var $aboutSec = $('section:eq(0)');
 var $projectSec = $('section:eq(1)');
