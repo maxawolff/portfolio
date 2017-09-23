@@ -1,0 +1,127 @@
+*{
+  background-color: #0da4e0;
+  color: white;
+}
+
+body{
+    padding: 1vw;
+}
+
+header{
+  height: 10vw;
+  font-size: 8vw;
+}
+
+h1{
+  float:left;
+  background-color: white;
+  color: #e00d0d;
+  padding: 10px;
+  border-radius: 45%;
+  border: 1px solid;
+  font-family: 'Croissant One', cursive;
+}
+
+h2{
+  font-size: 8vw;
+  background-color: white;
+  color: #e00d0d;
+  padding: 10px;
+  border-radius: 45%;
+  width: 50%;
+  border: 1px solid;
+  margin: 0 auto;
+  margin-bottom: 1vw;
+  font-family: 'Croissant One', cursive;
+}
+
+header i{
+  float: right;
+}
+
+.clearfix{
+  clear:both;
+}
+
+nav{
+  display:none;
+  margin-top: 6vw;
+}
+
+nav p{
+  font-size: 4vw;
+  background-color: white;
+  color: #e00d0d;
+  padding: 10px;
+  border-radius: 45%;
+  width: 50%;
+  border: 1px solid;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 2vw;
+  font-family: 'Croissant One', cursive;
+}
+
+nav div a{
+  font-size: 5vw;
+  text-decoration: none;
+  color: black;
+}
+
+/*first section*/
+
+section:first-child{
+  background-color: green;
+}
+
+#about{
+  margin-top: 3vh;
+}
+
+#about img{
+  float:left;
+  width: 35%;
+}
+section p{
+  font-size: 4vw;
+}
+
+#skills{
+  margin-top: 6vw;
+  text-align: center;
+}
+
+#findMe{
+  margin-top: 6vw;
+  text-align: center;
+}
+
+#findMe h2{
+  width: 49%;
+}
+
+.template{
+  display: none;
+}
+
+@media only screen and (min-width: 640px){
+  .menu{
+    display: none;
+  }
+
+  nav{
+    display:block;
+  }
+
+  nav div{
+    height: 7vw;
+    width: 24%;
+  }
+
+  h1{
+    float: none;
+    width:37%;
+    margin: 0 auto;
+    color: 70f716;
+  }
+}
