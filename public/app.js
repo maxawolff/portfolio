@@ -20,8 +20,8 @@ var app = app || {};
   };
 
   Project.loadAll = function(rawData){
-    rawData.forEach(function(projectObj){
-      projects.push(new Project(projectObj));
+    projects = rawData.map(function(data){
+      new Project(data);
     });
   };
 
