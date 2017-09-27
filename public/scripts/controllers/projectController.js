@@ -7,7 +7,7 @@ var app = app || {};
   projectController.showAll = function(){
     $('body').show();
     $('#projects').empty();
-    module.Project.fetchAll();
+    app.Project.fetchAll();
   };
 
   projectController.showAbout = function(){

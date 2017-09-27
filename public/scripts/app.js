@@ -20,13 +20,18 @@ var app = app || {};
   };
 
   Project.loadAll = function(rawData){
-    projects = rawData.map(function(data){
-      new Project(data);
+    // projects = rawData.map(function(data){
+    // new Project(data);
+    //   console.log(projects);
+    // });
+    rawData.forEach(function(projectObj){
+      projects.push(new Project(projectObj));
     });
   };
 
   Project.addToPage = function(){
     projects.forEach(function(project){
+      // console.log(project);
       $('#projects').append(project.toHtml());
     });
   };
