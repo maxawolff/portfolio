@@ -6,7 +6,7 @@ var app = app || {};
 
   projectController.showAll = function(){
     $('body').show();
-    $('#projects').empty();
+    // $('#projects').empty();
     app.Project.fetchAll();
   };
 
@@ -18,9 +18,7 @@ var app = app || {};
   projectController.showProjects = function(){
     $('section').hide();
     $('#projects').show();
-    app.repos.requestRepos(function(){
-      console.log(app.repos.all);
-    });
+    app.repos.requestRepos(app.repoView.index);
   };
 
   projectController.showSkills = function(){
