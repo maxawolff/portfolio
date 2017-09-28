@@ -5,7 +5,6 @@ const EXPRESS = require('express');
 const APP = EXPRESS();
 const requestProxy = require('express-request-proxy');
 const pg = require('pg');
-const fs = require('fs');
 const PORT = process.env.PORT || 3000;
 const conString = 'postgres://postgres:potato@localhost:5432/portfolio';
 const client = new pg.Client(conString);
