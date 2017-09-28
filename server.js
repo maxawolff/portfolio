@@ -18,7 +18,7 @@ APP.get('/', function(request, response){
   response.sendFile('index.html', {root: '.public'});
 });
 
-app.get('/github/*', proxyGitHub);
+APP.get('/github/*', proxyGitHub);
 
 function proxyGitHub(req, res){
   console.log('Routing a GitHub AJAX request for ', req.params[0]);

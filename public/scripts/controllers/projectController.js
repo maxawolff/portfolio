@@ -18,6 +18,9 @@ var app = app || {};
   projectController.showProjects = function(){
     $('section').hide();
     $('#projects').show();
+    app.repos.requestRepos(function(){
+      console.log(app.repos.all);
+    });
   };
 
   projectController.showSkills = function(){
